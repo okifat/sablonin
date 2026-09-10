@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sablonin — Admin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="admin-nav">
+  <div class="admin-brand"><b>SABLONIN</b><span>Admin</span></div>
+  <div style="display:flex;gap:16px;align-items:center;">
+    <a href="../index.html">&larr; Lihat Situs</a>
+  </div>
+</header>
+
+<div class="admin-shell">
+  <div class="banner-note">
+    <b>Prototipe lokal.</b> Data di bawah cuma tersimpan di localStorage browser ini, belum konek ke database sungguhan
+    &mdash; order dari situs akan muncul di sini <i>hanya kalau dibuka di browser yang sama</i>. Kalau situs ini nanti
+    di-upload ke GitHub Pages, halaman <code>/admin</code> ini masih bisa diakses publik tanpa login siapa pun yang
+    tau linknya. Sebelum dipakai buat data order asli, tambahkan backend (mis. Firebase) + proteksi login dulu.
+    Deteksi nominal bukti bayar (kolom &ldquo;Cek Nominal&rdquo;) pakai OCR gratis (Tesseract.js) &mdash; ini cuma
+    <b>bantuan</b>, bukan bukti sah, tetap cek manual gambarnya sebelum ubah status.
+  </div>
+
+  <section class="stat-row">
+    <div class="stat-tile"><div class="stat-label">Total Order</div><div class="stat-value" id="statOrders">0</div></div>
+    <div class="stat-tile"><div class="stat-label">Menunggu Verifikasi</div><div class="stat-value" id="statPending">0</div></div>
+    <div class="stat-tile"><div class="stat-label">Kunjungan (30 hari)</div><div class="stat-value" id="statViews">0</div></div>
+    <div class="stat-tile"><div class="stat-label">Omzet Terverifikasi+</div><div class="stat-value" id="statRevenue">Rp 0</div></div>
+  </section>
+
+  <section class="admin-card">
+    <div class="admin-card-head">
+      <h2>Kunjungan Situs</h2>
+      <span class="admin-card-sub">14 hari terakhir, tercatat sejak index.html pertama dibuka</span>
+    </div>
+    <div class="chart">
+      <div class="chart-bars" id="chartBars"></div>
+      <div class="chart-labels" id="chartLabels"></div>
+    </div>
+  </section>
+
+  <section class="admin-card">
+    <div class="admin-card-head">
+      <h2>Order Masuk</h2>
+      <div class="admin-actions">
+        <button class="btn sm" id="seedBtn">Muat Data Contoh</button>
+        <button class="btn sm btn-danger" id="clearBtn">Hapus Semua Data</button>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Order ID</th><th>Tanggal</th><th>Pemesan</th><th>Ukuran &times; Qty</th>
+            <th>Warna</th><th>Posisi</th><th>Total</th><th>Bukti Bayar</th><th>Cek Nominal</th>
+            <th>Status</th><th>Konfirmasi</th>
+          </tr>
+        </thead>
+        <tbody id="ordersBody"></tbody>
+      </table>
+    </div>
+    <div class="empty-state" id="ordersEmpty" hidden>
+      Belum ada order masuk. Order yang dibuat lewat halaman utama (di browser ini) bakal otomatis muncul di sini,
+      atau klik &ldquo;Muat Data Contoh&rdquo; buat lihat contoh tampilannya.
+    </div>
+  </section>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sablonin &mdash; Cetak DTF A5&ndash;A3</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <button class="nav-brand" id="navBrand">SABLONIN</button>
+    <nav class="nav-links">
+      <a href="#carakerja" data-target="carakerja" class="nav-link-text">Cara Kerja</a>
+      <a href="#harga" data-target="harga" class="nav-link-text">Harga</a>
+      <button class="btn btn-primary" id="navOrderBtn" style="padding:9px 18px;font-size:.8rem;">Pesan Sekarang</button>
+    </nav>
+  </div>
+</header>
+
+<div id="homeView">
+  <div class="hero-band">
+    <div class="halftone"></div>
+    <section class="hero">
+      <div class="hero-box">
+        <span class="reg-mark tl"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor"><circle cx="10" cy="10" r="8"/><line x1="10" y1="0" x2="10" y2="20"/><line x1="0" y1="10" x2="20" y2="10"/></svg></span>
+        <span class="reg-mark br"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor"><circle cx="10" cy="10" r="8"/><line x1="10" y1="0" x2="10" y2="20"/><line x1="0" y1="10" x2="20" y2="10"/></svg></span>
+        <span class="hero-sticker"><span class="sticker">A5&ndash;A3 SIAP CETAK</span></span>
+        <div class="eyebrow">DTF Print-on-Demand</div>
+        <h1>Upload Desain, Kami yang Cetak DTF-nya.</h1>
+        <p class="lede">Dari file di HP kamu jadi hasil cetak DTF siap heat-press. Bayar bisa sekalian atau menyusul &mdash; tinggal upload bukti transfer belakangan.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" id="heroOrderBtn">Pesan Sekarang</button>
+          <a href="#harga" data-target="harga" class="btn btn-ghost">Lihat Harga</a>
+        </div>
+        <div class="badge-row">
+          <span class="spec-badge">300 DPI</span>
+          <span class="spec-badge">CMYK + White Underbase</span>
+          <span class="spec-badge">Contour Cut Tersedia</span>
+          <span class="spec-badge">A5 &ndash; A3</span>
+        </div>
+        <div class="colorbar">
+          <span style="background:#00aeef"></span><span style="background:#ec008c"></span>
+          <span style="background:#ffde17"></span><span style="background:#15161b"></span>
+          <span style="background:#fff;border-right:2px solid var(--line-bold);"></span>
+        </div>
+        <div class="colorbar-label"><span>C</span><span>M</span><span>Y</span><span>K</span><span>White</span></div>
+      </div>
+    </section>
+  </div>
+
+  <section class="section" id="carakerja">
+    <div class="section-inner">
+      <div class="section-eyebrow">Proses</div>
+      <h2>Cara Kerja</h2>
+      <div class="steps-grid">
+        <div class="step-card"><div class="step-num">01</div><h3>Upload Desain</h3>
+          <p>PNG/JPG, background transparan otomatis dipotong rapi kalau pilih contour cut.</p></div>
+        <div class="step-card"><div class="step-num">02</div><h3>Pilih Ukuran &amp; Bayar</h3>
+          <p>A5, A4, atau A3. Transfer/QRIS sekarang, atau upload bukti belakangan pakai link order kamu.</p></div>
+        <div class="step-card"><div class="step-num">03</div><h3>Terima Hasil Cetak</h3>
+          <p>Film DTF siap press, tinggal tempel ke kaos atau produk kamu pakai heat press.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band-paper2" id="harga">
+    <div class="section-inner">
+      <div class="section-eyebrow">Harga</div>
+      <h2>Ukuran &amp; Harga</h2>
+      <div class="price-grid" id="priceGrid"></div>
+    </div>
+  </section>
+
+  <section class="section band-coral" id="kualitas">
+    <div class="section-inner">
+      <div class="section-eyebrow">Bahan</div>
+      <h2>Kenapa DTF di Sablonin</h2>
+      <div class="quality-wrap">
+        <div class="quality-list">
+          <div class="quality-item"><span class="quality-dot"></span>
+            <div><h4>Film DTF + Powder Adhesive</h4><p>Hasil cetak nempel kuat di cotton, polyester, campuran, bahkan bahan gelap.</p></div></div>
+          <div class="quality-item"><span class="quality-dot"></span>
+            <div><h4>Warna Tahan Cuci</h4><p>Ink CMYK + white underbase, warna tetap tajam meski sering dicuci &amp; disetrika.</p></div></div>
+          <div class="quality-item"><span class="quality-dot"></span>
+            <div><h4>Contour Cut Presisi</h4><p>Bentuk desain dipotong ngikutin outline, nggak perlu gunting manual.</p></div></div>
+          <div class="quality-item"><span class="quality-dot"></span>
+            <div><h4>Ukuran Fleksibel</h4><p>A5 buat logo saku, sampai A3 buat desain full depan kaos.</p></div></div>
+        </div>
+        <div>
+          <div class="layer-demo-surface">
+            <div class="layer-demo">
+              <div class="ring c"></div><div class="ring m"></div><div class="ring y"></div>
+            </div>
+          </div>
+          <div class="layer-caption">Lapisan tinta CMYK di atas white underbase</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="cta-inner">
+      <div><h3>Siap cetak desain kamu?</h3><p>Upload sekarang, proses cepat, bayar bisa menyusul.</p></div>
+      <button class="btn btn-ghost" id="ctaOrderBtn">Pesan Sekarang</button>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div><span class="f-brand">SABLONIN</span><div class="footer-note">Print-on-Demand DTF &middot; A5 &ndash; A3</div></div>
+      <div>Order &amp; tanya-tanya: <a class="footer-note" href="https://wa.me/6281394928866" target="_blank" rel="noopener noreferrer" style="color:#e9e4d8;">0813-9492-8866 (WhatsApp)</a></div>
+    </div>
+  </footer>
+</div>
+
+<div id="orderView" hidden>
+  <div class="shell">
+    <button class="back-link" id="backHomeLink">&larr; Kembali ke Beranda</button>
+    <div class="layout">
+      <section class="flow-card" aria-label="Form pemesanan">
+        <ol class="stepper" id="stepper">
+          <li class="stepper-item active" data-step="1"><span class="stepper-num">1</span><span>Desain</span></li>
+          <li class="stepper-item" data-step="2"><span class="stepper-num">2</span><span>Data Pemesan</span></li>
+          <li class="stepper-item" data-step="3"><span class="stepper-num">3</span><span>Bayar</span></li>
+          <li class="stepper-item" data-step="4"><span class="stepper-num">4</span><span>Selesai</span></li>
+        </ol>
+
+        <!-- STEP 1 -->
+        <div class="panel" id="panel-1">
+          <h2>Upload Desain</h2>
+          <p class="panel-sub">Format PNG/JPG, resolusi disarankan 300 DPI biar hasil cetak DTF-nya tajam.</p>
+
+          <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Upload desain">
+            <div id="dzPreview"></div>
+            <div class="dz-label" id="dzLabel"><b>Klik untuk upload</b> atau tarik file ke sini</div>
+          </div>
+          <input type="file" id="fileInput" accept="image/*" hidden>
+          <div class="field-error" id="err-file"></div>
+
+          <label style="display:block;margin-bottom:8px;">Ukuran Cetak</label>
+          <div class="size-picker" id="sizePicker"></div>
+
+          <label style="display:block;margin-bottom:8px;">Coba di Baju &mdash; seret buat muter, seret desain buat atur posisi</label>
+          <div class="shirt-preview">
+            <div class="shirt-col">
+              <div class="shirt-stage" id="shirtStage">
+                <svg class="shirt-svg view-front active" viewBox="0 0 200 220" aria-hidden="true">
+                  <path class="shirt-fill" d="M70,10 L100,26 L130,10 L162,42 L188,72 L160,96 L146,82 L146,210 L54,210 L54,82 L40,96 L12,72 L38,42 Z"></path>
+                </svg>
+                <svg class="shirt-svg view-back" viewBox="0 0 200 220" aria-hidden="true">
+                  <path class="shirt-fill" d="M70,14 L130,14 L162,42 L188,72 L160,96 L146,82 L146,210 L54,210 L54,82 L40,96 L12,72 L38,42 Z"></path>
+                  <line x1="100" y1="22" x2="100" y2="204" stroke="var(--line-soft)" stroke-width="1.5" stroke-dasharray="4 4"></line>
+                </svg>
+                <svg class="shirt-svg view-right" viewBox="0 0 200 220" aria-hidden="true">
+                  <path class="shirt-fill" d="M77,14 L105,14 L123,34 L143,58 L131,74 L119,64 L119,205 L77,205 Z"></path>
+                </svg>
+                <svg class="shirt-svg view-left" viewBox="0 0 200 220" aria-hidden="true">
+                  <g transform="scale(-1,1) translate(-200,0)">
+                    <path class="shirt-fill" d="M77,14 L105,14 L123,34 L143,58 L131,74 L119,64 L119,205 L77,205 Z"></path>
+                  </g>
+                </svg>
+                <div class="design-editor" id="designEditor" hidden>
+                  <div class="design-img-wrap" id="designImgWrap">
+                    <div class="design-placeholder">Desain kamu</div>
+                  </div>
+                  <div class="handle handle-rotate" id="rotateHandle" title="Putar desain"></div>
+                  <div class="handle handle-resize" id="resizeHandle" title="Ubah ukuran"></div>
+                </div>
+              </div>
+              <div class="view-nav">
+                <button type="button" class="view-btn" id="viewPrevBtn" aria-label="Putar ke kiri">&#8249;</button>
+                <span class="view-label" id="viewLabel">Depan</span>
+                <button type="button" class="view-btn" id="viewNextBtn" aria-label="Putar ke kanan">&#8250;</button>
+              </div>
+              <div class="spin-hint">Tarik badan baju ke kiri/kanan buat muter 360&deg;</div>
+              <div class="placement-row">
+                <span class="shirt-side-label" style="margin:0;">Cetak di</span>
+                <label class="radio-chip"><input type="radio" name="printSide" value="front" checked> Depan</label>
+                <label class="radio-chip"><input type="radio" name="printSide" value="back"> Belakang</label>
+                <button type="button" class="btn-reset-pos" id="resetPosBtn">Reset posisi</button>
+              </div>
+            </div>
+            <div class="shirt-side">
+              <div class="shirt-side-label">Warna Baju &mdash; bebas pilih sendiri</div>
+              <div class="color-picker-row">
+                <input type="color" id="colorPicker" value="#f5f5f0" aria-label="Pilih warna baju bebas">
+                <div class="color-row" id="colorRow"></div>
+              </div>
+              <div class="admin-note">Warna di atas preview visual, bebas kamu coba-coba sepuasnya. Warna kain asli tergantung stok yang ada &mdash; <b>konfirmasi ke admin dulu</b> kalau butuh warna spesifik sebelum transfer.</div>
+              <a class="wa-link" href="https://wa.me/6281394928866" target="_blank" rel="noopener noreferrer">Tanya Admin via WhatsApp &rarr;</a>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="qty">Jumlah (pcs)</label>
+            <input type="number" id="qty" min="1" max="100" value="1">
+          </div>
+
+          <label class="checkbox-row"><input type="checkbox" id="contourCut"> Potong sesuai bentuk desain (contour cut)</label>
+
+          <div class="field-group" style="margin-top:16px;">
+            <label for="catatan">Catatan (opsional)</label>
+            <textarea id="catatan" placeholder="Contoh: warna putih di desain tolong solid, posisi cetak di tengah."></textarea>
+          </div>
+
+          <div class="price-box">
+            <span class="label">Estimasi harga</span>
+            <span class="amount" id="priceAmount">Rp 35.000</span>
+          </div>
+
+          <div class="panel-nav">
+            <span></span>
+            <button class="btn btn-primary" id="next-1">Lanjut ke Data Pemesan</button>
+          </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="panel" id="panel-2" hidden>
+          <h2>Data Pemesan</h2>
+          <p class="panel-sub">Dipakai buat konfirmasi order dan kirim link status/pembayaran.</p>
+
+          <div class="field-group">
+            <label for="nama">Nama Lengkap</label>
+            <input type="text" id="nama" placeholder="Nama kamu">
+          </div>
+          <div class="two-col">
+            <div class="field-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="nama@email.com">
+            </div>
+            <div class="field-group">
+              <label for="wa">Nomor WhatsApp</label>
+              <input type="tel" id="wa" placeholder="08xxxxxxxxxx">
+            </div>
+          </div>
+          <div class="field-error" id="err-contact"></div>
+
+          <div class="panel-nav">
+            <button class="btn btn-ghost" id="back-2">Kembali</button>
+            <button class="btn btn-primary" id="next-2">Buat Pesanan</button>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="panel" id="panel-3" hidden>
+          <h2>Pembayaran</h2>
+          <p class="panel-sub">Pesanan sudah dibuat. Upload bukti transfer sekarang atau menyusul &mdash; tim baru bisa mulai cetak setelah bukti bayar masuk.</p>
+
+          <div class="orderid-box">
+            <div>
+              <div class="oi-label">Order ID</div>
+              <div class="oi-id" id="orderIdDisplay">&mdash;</div>
+            </div>
+          </div>
+
+          <div class="summary-list" id="summaryList"></div>
+
+          <div class="qr-wrap">
+            <div class="qr-grid" id="qrGrid"></div>
+            <div class="qr-meta">
+              Scan QRIS &mdash; total <b id="qrAmount">Rp 35.000</b><br>
+              <span style="font-size:.72rem;">(contoh tampilan, bukan QR aktif)</span>
+            </div>
+          </div>
+
+          <div class="bank-box">
+            <div class="bank-row"><span>Transfer Bank</span><span>BCA 1234567890</span></div>
+            <div class="bank-row"><span>Atas Nama</span><span>Sablonin Studio</span></div>
+          </div>
+
+          <div class="field-group">
+            <label for="proofInput">Upload Bukti Transfer (screenshot, bukan PDF)</label>
+            <input type="file" id="proofInput" accept="image/*">
+          </div>
+          <div id="proofStatus"></div>
+
+          <div class="or-divider">atau</div>
+
+          <div class="later-box">
+            <p>Belum sempat bayar? Simpan link ini, upload bukti transfer kapan aja sebelum jam 8 malam ini.</p>
+            <div class="later-link-row">
+              <span class="later-link" id="laterLink">sablonin.id/bayar/&mdash;</span>
+              <button class="copy-btn" id="copyLaterLink">Salin</button>
+            </div>
+          </div>
+
+          <div class="panel-nav">
+            <button class="btn btn-ghost" id="back-3">Kembali</button>
+            <button class="btn btn-primary" id="next-3">Lihat Status Pesanan</button>
+          </div>
+        </div>
+
+        <!-- STEP 4 -->
+        <div class="panel" id="panel-4" hidden>
+          <h2>Pesanan Diterima</h2>
+          <p class="panel-sub">Simpan Order ID buat cek status atau upload bukti bayar kalau belum.</p>
+
+          <div class="orderid-box">
+            <div>
+              <div class="oi-label">Order ID</div>
+              <div class="oi-id" id="orderIdDisplay2">&mdash;</div>
+            </div>
+            <button class="copy-btn" id="copyOrderId">Salin ID</button>
+          </div>
+
+          <ul class="timeline" id="timelineList"></ul>
+
+          <div class="later-box">
+            <p>Link status &amp; upload bukti bayar (kalau belum):</p>
+            <div class="later-link-row">
+              <span class="later-link" id="laterLink2">sablonin.id/bayar/&mdash;</span>
+              <button class="copy-btn" id="copyLaterLink2">Salin</button>
+            </div>
+          </div>
+
+          <div class="panel-nav">
+            <span></span>
+            <button class="btn btn-primary" id="restartBtn">Buat Pesanan Baru</button>
+          </div>
+        </div>
+      </section>
+
+      <aside class="notif-feed" aria-label="Simulasi notifikasi admin">
+        <h2>Notifikasi ke Admin</h2>
+        <p class="notif-sub">Simulasi email &amp; Telegram yang otomatis masuk tiap ada aktivitas order.</p>
+        <ul class="notif-list" id="notifList">
+          <li class="notif-empty">Belum ada aktivitas. Mulai isi form di sebelah kiri.</li>
+        </ul>
+      </aside>
+    </div>
+
+    <p class="proto-note">Prototipe front-end untuk ditinjau &mdash; belum terhubung ke payment gateway sungguhan. Cek nominal bukti bayar &amp; email otomatis pakai layanan gratis (Tesseract.js / EmailJS) yang perlu diaktifkan dulu.</p>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/4.1.1/tesseract.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/emailjs-com/3.2.0/email.min.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
