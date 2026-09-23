@@ -9,6 +9,8 @@ sablonin/
 ├── index.html      # halaman utama (customer)
 ├── styles.css
 ├── app.js
+├── assets/
+│   └── qris.png    # QRIS asli kamu, taruh manual (lihat assets/README.md)
 └── admin/
     ├── index.html  # dashboard admin
     ├── styles.css
@@ -44,11 +46,15 @@ Matiin server dengan `Ctrl+C` di terminal. Kalau port 8800 kepake, ganti aja jad
 
 ## Yang perlu diaktifkan manual (opsional)
 
+- **Order tersimpan beneran (bukan cuma di satu browser)** — sambungkan ke Google Sheets + Drive, gratis,
+  ~10 menit sekali setup. Lihat panduan lengkap di [`SETUP_SHEETS.md`](SETUP_SHEETS.md). Sebelum ini diisi,
+  situs tetap jalan pakai `localStorage` (mode demo, data per-browser aja) seperti biasa.
 - **Notif email otomatis** pakai [EmailJS](https://www.emailjs.com) (gratis 200 email/bulan): daftar akun, bikin Service + Template, lalu isi `EMAILJS_SERVICE_ID`, `EMAILJS_TEMPLATE_ID`, `EMAILJS_PUBLIC_KEY` di bagian atas `app.js`. Sebelum diisi, fitur ini diam aja (gak error).
 - **Nomor WA admin & rekening bank** masih hardcode di `index.html`/`app.js` — ganti sesuai kebutuhan sebelum dipakai beneran.
+- **QRIS asli** — taruh file QR kamu di `assets/qris.png` (lihat [`assets/README.md`](assets/README.md)). Sebelum file itu ada, halaman pembayaran nampilin kotak "Taruh file QRIS asli di assets/qris.png" sebagai pengingat, bukan QR palsu lagi. Karena ini QRIS statis (gratis, tanpa payment gateway), nominalnya gak ke-embed otomatis — customer diminta ketik manual sesuai total yang ditampilkan di sebelah QR.
 
 ## Catatan sebelum dipakai buat order asli
 
-- Data order & kunjungan cuma tersimpan di `localStorage` browser — **gak ke-share antar device**. Order dari HP customer gak otomatis nyampe ke HP admin. Buat itu jalan beneran, perlu backend/database (misal Firebase, gratis).
-- Halaman `/admin` gak ada proteksi login. Kalau sudah di-deploy publik (GitHub Pages/Netlify/dll), siapa pun yang tau linknya bisa buka. Tambahkan otentikasi dulu sebelum dipakai buat data order asli.
+- **Tanpa setup Sheets** (lihat di atas): data order & kunjungan cuma tersimpan di `localStorage` browser — **gak ke-share antar device**. Order dari HP customer gak otomatis nyampe ke HP admin.
+- Halaman `/admin` gak ada proteksi login. Kalau sudah di-deploy publik (GitHub Pages/Netlify/dll), siapa pun yang tau linknya bisa buka. Tambahkan otentikasi dulu sebelum dipakai buat data order asli — ini berlaku baik pakai localStorage maupun Sheets.
 - Deteksi nominal bukti bayar (OCR via Tesseract.js) sifatnya cuma bantuan, bukan verifikasi sah — tetap cek manual gambarnya.
