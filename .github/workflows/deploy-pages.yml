@@ -1,0 +1,57 @@
+name: Deploy Sablonin to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Cuma 1 deployment jalan bersamaan - kalau ada push baru pas masih proses,
+# antre aja (jangan cancel yang lagi jalan, biar gak ninggalin state setengah jadi).
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # API_URL (link Google Apps Script Web App dari SETUP_SHEETS.md) SENGAJA
+      # gak ditulis langsung di app.js/admin/app.js karena repo ini public -
+      # begitu ke-commit, siapa aja bisa lihat & pakai buat baca data order orang.
+      # Di sini di-suntik cuma ke HASIL BUILD yang di-deploy, bukan ke source
+      # code repo-nya. Kalau secret SABLONIN_API_URL belum diisi, ini no-op
+      # (API_URL tetap "", situs jalan mode localStorage/demo seperti biasa).
+      - name: Inject API_URL secret
+        env:
+          API_URL: ${{ secrets.SABLONIN_API_URL }}
+        run: |
+          for f in app.js admin/app.js; do
+            sed -i "s|var API_URL = \"\";|var API_URL = \"${API_URL}\";|" "$f"
+          done
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
